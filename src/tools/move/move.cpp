@@ -1,7 +1,7 @@
 #include "../move/move.h"
 
-#define TAP kCGHIDEventTap
-#define MOVE kCGEventMouseMoved
+#define TAP			kCGHIDEventTap
+#define MOVE		kCGEventMouseMoved
 #define LEFT_BUTTON kCGMouseButtonLeft
 
 void moveTo(int x, int y)

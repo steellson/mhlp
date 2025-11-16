@@ -4,17 +4,19 @@ FRAMEWORKS = -framework CoreFoundation -framework CoreGraphics
 TARGET = mhlp
 
 SOURCES = main.cpp \
-          src/scroll/scroll.cpp \
-          src/click/click.cpp \
-          src/move/move.cpp \
-		  src/sleep/tsleep.cpp \
-		  src/screen/screen.cpp
+		  src/process/process.cpp \
+          src/tools/scroll/scroll.cpp \
+          src/tools/click/click.cpp \
+          src/tools/move/move.cpp \
+		  src/tools/sleep/tsleep.cpp \
+		  src/tools/screen/screen.cpp
 
-HEADERS = src/scroll/scroll.h \
-          src/click/click.h \
-          src/move/move.h \
-		  src/sleep/tsleep.h \
-		  src/screen/screen.h
+HEADERS = src/process/process.h \
+		  src/tools/scroll/scroll.h \
+          src/tools/click/click.h \
+          src/tools/move/move.h \
+		  src/tools/sleep/tsleep.h \
+		  src/tools/screen/screen.h
 
 OBJECTS = $(SOURCES:.cpp=.o)
 

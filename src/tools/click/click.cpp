@@ -1,4 +1,4 @@
-#include "click.h"
+#include "../click/click.h"
 
 #define TAP			kCGHIDEventTap
 #define UP			kCGEventLeftMouseUp
