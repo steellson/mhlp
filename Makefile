@@ -9,14 +9,16 @@ SOURCES = main.cpp \
           src/tools/click/click.cpp \
           src/tools/move/move.cpp \
 		  src/tools/sleep/tsleep.cpp \
-		  src/tools/screen/screen.cpp
+		  src/tools/screen/screen.cpp \
+		  src/tools/random/random.cpp
 
 HEADERS = src/process/process.h \
 		  src/tools/scroll/scroll.h \
           src/tools/click/click.h \
           src/tools/move/move.h \
 		  src/tools/sleep/tsleep.h \
-		  src/tools/screen/screen.h
+		  src/tools/screen/screen.h \
+		  src/tools/random/random.h
 
 OBJECTS = $(SOURCES:.cpp=.o)
 

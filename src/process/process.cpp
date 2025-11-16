@@ -1,5 +1,5 @@
 #include "../process/process.h"
-#include <array>
+#include "../tools/random/random.h"
 #include <iostream>
 
 #define DELAY_RANGE  60
@@ -9,17 +9,17 @@ using namespace std;
 
 int getRandomDelay()
 {
-	int del = rand() % DELAY_RANGE;
+	int del = getRandomInt(DELAY_RANGE);
 	cout << "Delay " << del << " sec" << endl;
 
 	return del;
 }
 
-int getRandomScrollDirection() 
+int getRandomScrollDirection()
 {
-	int val = rand() % SCROLL_RANGE;
+	int val = getRandomInt(SCROLL_RANGE);
 	int arr[2] = {-val, val};
-	int randIndex = rand() % 2;
+	int randIndex = getRandomInt(2);
 
 	int direction = arr[randIndex];
 	cout << "Scroll direction " << direction << endl;
