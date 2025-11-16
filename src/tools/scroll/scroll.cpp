@@ -6,8 +6,8 @@
 
 /*
  * Vertical scroll
- * delta > 0 - scroll to top
- * delta < 0 - scroll to bottom
+ * delta > 0 - scroll up
+ * delta < 0 - scroll down
  *
  * Horizontal scroll
  * delta > 0 - scroll to right

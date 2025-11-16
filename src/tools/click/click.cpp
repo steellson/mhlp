@@ -1,9 +1,13 @@
+#include <stdlib.h>
+#include <iostream>
 #include "../click/click.h"
 
 #define TAP			kCGHIDEventTap
 #define UP			kCGEventLeftMouseUp
 #define DOWN		kCGEventLeftMouseDown
 #define LEFT_BUTTON kCGMouseButtonLeft
+
+using namespace std;
 
 CGPoint getPosition()
 {
@@ -16,6 +20,7 @@ CGPoint getPosition()
 void leftClick()
 {
     CGPoint point = getPosition();
+	cout << "Click to x: " << point.x << " y: " << point.y << endl;	
 
     CGEventRef mouseDown = CGEventCreateMouseEvent(NULL, DOWN, point, LEFT_BUTTON);
     CGEventPost(TAP, mouseDown);

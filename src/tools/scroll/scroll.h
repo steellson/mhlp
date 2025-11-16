@@ -1,6 +1,6 @@
+#include "../sleep/tsleep.h"
 #include <CoreFoundation/CoreFoundation.h>
 #include <CoreGraphics/CoreGraphics.h>
-#include "../sleep/tsleep.h"
 
 #pragma once
 
@@ -22,5 +22,5 @@ void smoothScroll(int totalDelta, int steps = 20, int delayMs = 10);
 // Scroll to bottom of page
 void scrollToBottom(int scrollAmount = 10, int steps = 50);
 
-// Scroll to bein page
+// Scroll to start of page
 void scrollToTop(int scrollAmount = 10, int steps = 50);

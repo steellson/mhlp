@@ -1,8 +1,12 @@
+#include <stdlib.h>
+#include <iostream>
 #include "../move/move.h"
 
 #define TAP			kCGHIDEventTap
 #define MOVE		kCGEventMouseMoved
 #define LEFT_BUTTON kCGMouseButtonLeft
+
+using namespace std;
 
 void moveTo(int x, int y)
 {
@@ -17,5 +21,7 @@ void moveRand(int divider)
     ScreenSize size = getScreenSize();
     int moveX = rand() % (int)(size.width / divider);
     int moveY = rand() % (int)(size.height / divider);
-    moveTo(moveX, moveY);
+    
+	cout << "Moved to x: " << moveX << " y: " << moveY << endl;
+	moveTo(moveX, moveY);
 }
