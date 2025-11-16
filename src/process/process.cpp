@@ -7,42 +7,41 @@
 
 using namespace std;
 
-int getRandomDelay()
-{
-	int del = getRandomInt(DELAY_RANGE);
-	cout << "Delay " << del << " sec" << endl;
+int del, scrll;
 
-	return del;
+void randomizeDelay()
+{
+	del = getRandomInt(DELAY_RANGE);
+	cout << "Delay " << del << " sec" << endl;
 }
 
-int getRandomScrollDirection()
+void randomizeScrollDirection()
 {
 	int val = getRandomInt(SCROLL_RANGE);
 	int arr[2] = {-val, val};
 	int randIndex = getRandomInt(2);
 
 	int direction = arr[randIndex];
+	scrll = direction;
 	cout << "Scroll direction " << direction << endl;
-
-	return direction;
 }
 
 void process()
 {
 	for (;;)
 	{
-		int del1 = getRandomDelay();
-		int scroll1 = getRandomScrollDirection();
-        tSleepSec(del1);
-		smoothScroll(scroll1);
+		randomizeDelay();
+		randomizeScrollDirection();
+        tSleepSec(del);
+		smoothScroll(scrll);
 		leftClick();
-		
+
 		moveRand(2);
 
-		int del2 = getRandomDelay();
-		int scroll2 = getRandomScrollDirection();
-        tSleepSec(del2);
-		smoothScroll(scroll2);
+		randomizeDelay();
+		randomizeScrollDirection();
+        tSleepSec(del);
+		smoothScroll(scrll);
         leftClick();
 	}
 }
